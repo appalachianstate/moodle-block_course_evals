@@ -30,7 +30,7 @@
       }
 
       function get_content() {
-          global $USER,;
+          global $USER;
 
           if($this->content !== NULL) {
               return $this->content;
