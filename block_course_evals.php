@@ -41,7 +41,7 @@
         
           // enter the URL to your server's rpi.asp page, do not include uid in the path
           // this is found on your Remote Portal Interface Setup page in CourseEval3
-  		    //$urlstart = 'http://your-site.edu/etw/ets/et.asp?nxappid=RP1&nxmid=getinfo';
+  	  //$urlstart = 'http://your-site.edu/etw/ets/et.asp?nxappid=RP1&nxmid=getinfo';
           $urlstart = 'https://p5.courseval.net/etw/ets/et.asp?nxappid=R19&nxmid=getinfo';
 		
           $this->content->text = "<script type='text/javascript' src='{$urlstart}&uid={$USER->username}'></script>";
