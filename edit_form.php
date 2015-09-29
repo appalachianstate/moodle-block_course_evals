@@ -24,15 +24,17 @@
    * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
    */
 
-  class block_course_evals_edit_form extends block_edit_form {
+  class block_course_evals_edit_form extends block_edit_form 
+  {
  
-      protected function specific_definition($mform) {
+      protected function specific_definition($mform) 
+      {
         
           $mform->addElement('header', 'config_header', get_string('course_evals_settings', 'block_course_evals'));
           $mform->addElement('html', '<p>Enter the URL to your rpi.asp page; this is found on your Remote Portal Interface Setup page in CourseEval3. Do not include uid in the path.</p>');
           
           $mform->addElement('text', 'config_url', get_string('course_evals_url', 'block_course_evals'));
-          $mform->setType('config_url', PARAM_RAW);
+          $mform->setType('config_url', PARAM_URL);
           $mform->addRule('config_url', null, 'required', null, 'server');
       }
   }

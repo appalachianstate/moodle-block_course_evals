@@ -24,12 +24,15 @@
    * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
    */
 
-  class block_course_evals extends block_base {
-      function init() {
+  class block_course_evals extends block_base 
+  {
+      function init() 
+      {
           $this->title = get_string('pluginname', 'block_course_evals');
       }
 
-      function get_content() {
+      function get_content() 
+      {
           global $USER;
 
           if($this->content !== NULL) {
