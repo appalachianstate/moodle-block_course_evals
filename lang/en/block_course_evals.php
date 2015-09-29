@@ -26,7 +26,6 @@
 
   $string['pluginname'] = 'Course Evaluations';
   
-  $string['pluginname'] = 'Simple HTML block';
   $string['course_evals'] = 'Course Evaluations';
   $string['course_evals:addinstance'] = 'Add a new CoursEval block';
   $string['course_evals:myaddinstance'] = 'Add a new CoursEval block to the My Moodle page';
