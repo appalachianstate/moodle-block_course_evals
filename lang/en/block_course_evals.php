@@ -29,3 +29,5 @@
   $string['course_evals'] = 'Course Evaluations';
   $string['course_evals:addinstance'] = 'Add a new CoursEval block';
   $string['course_evals:myaddinstance'] = 'Add a new CoursEval block to the My Moodle page';
+  $string['course_evals_settings'] = 'CoursEval settings';
+  $string['course_evals_url'] = 'URL';

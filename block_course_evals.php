@@ -38,11 +38,11 @@
         
           $this->content = new stdClass;
           $this->content->footer = '';
-        
-          // enter the URL to your server's rpi.asp page, do not include uid in the path
-          // this is found on your Remote Portal Interface Setup page in CourseEval3
-          $urlstart = 'https://p5.courseval.net/etw/ets/et.asp?nxappid=R19&nxmid=getinfo';
-		
+          
+          if (! empty($this->config->url)) {
+              $urlstart = $this->config->url;
+          }
+          		
           $this->content->text = "<script type='text/javascript' src='{$urlstart}&uid={$USER->username}'></script>";
 
           return $this->content;
