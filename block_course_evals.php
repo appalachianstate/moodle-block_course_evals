@@ -29,11 +29,12 @@
       function init() 
       {
           $this->title = get_string('pluginname', 'block_course_evals');
+          $this->blockConfigs = get_config('block_course_evals');
       }
 
       function get_content() 
       {
-          global $USER;
+          global $CFG, $USER;
 
           if($this->content !== NULL) {
               return $this->content;
@@ -42,12 +43,20 @@
           $this->content = new stdClass;
           $this->content->footer = '';
           
-          if (! empty($this->config->url)) {
-              $urlstart = $this->config->url;
+          $urlstart = '';
+          if (!empty($CFG->block_course_evals_url)) {
+            $urlstart = $CFG->block_course_evals_url;
           }
-          		
           $this->content->text = "<script type='text/javascript' src='{$urlstart}&uid={$USER->username}'></script>";
-
           return $this->content;
+      }
+      
+      /**
+       * Override
+       * @see block_base::has_config()
+       */
+      function has_config()
+      {
+          return true;
       }
   }

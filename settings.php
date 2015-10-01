@@ -1,5 +1,5 @@
 <?php
- 
+
   // This file is part of Moodle - http://moodle.org/
   //
   // Moodle is free software: you can redistribute it and/or modify
@@ -24,17 +24,10 @@
    * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
    */
 
-  class block_course_evals_edit_form extends block_edit_form 
-  {
- 
-      protected function specific_definition($mform) 
-      {
-        
-          $mform->addElement('header', 'config_header', get_string('course_evals_settings', 'block_course_evals'));
-          $mform->addElement('html', '<p>Enter the URL to your rpi.asp page; this is found on your Remote Portal Interface Setup page in CourseEval3. Do not include uid in the path.</p>');
-          
-          $mform->addElement('text', 'config_url', get_string('course_evals_url', 'block_course_evals'));
-          $mform->setType('config_url', PARAM_URL);
-          $mform->addRule('config_url', null, 'required', null, 'server');
-      }
+  defined('MOODLE_INTERNAL') || die;
+
+  if ($ADMIN->fulltree) {
+  
+    $settings->add(new admin_setting_configtext('block_course_evals_url', get_string('course_evals_url', 'block_course_evals'), get_string('course_evals_url_desc', 'block_course_evals'), '', PARAM_URL));
+    
   }

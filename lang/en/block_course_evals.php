@@ -31,3 +31,4 @@
   $string['course_evals:myaddinstance'] = 'Add a new CoursEval block to the My Moodle page';
   $string['course_evals_settings'] = 'CoursEval settings';
   $string['course_evals_url'] = 'URL';
+  $string['course_evals_url_desc'] = 'Enter the URL to your rpi.asp page; this is found on your Remote Portal Interface Setup page in CourseEval3. Do not include uid in the path.';
