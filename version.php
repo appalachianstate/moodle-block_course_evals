@@ -24,5 +24,6 @@
    * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
    */
 
+  $plugin->component = 'block_course_evals';
   $plugin->version = 2015092900;
   $plugin->requires = 2010112400;
