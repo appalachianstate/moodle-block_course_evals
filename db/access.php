@@ -19,7 +19,7 @@
    * CourseEval Online Course Evaluation plugin
    *
    * @package    block_course_evals
-   * @author     Michelle Melton, Fred Woolard (modified code from Scott Krajewski, Augsburg College)
+   * @author     Michelle Melton (modified code from Scott Krajewski, Augsburg College)
    * @copyright  2015 Appalachian State University
    * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
    */
