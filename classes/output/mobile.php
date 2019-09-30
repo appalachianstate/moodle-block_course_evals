@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -25,46 +24,44 @@
  */
 
 namespace block_course_evals\output;
- 
+
 defined('MOODLE_INTERNAL') || die();
- 
+
 /**
- * Mobile output class for certificate
+ * Mobile output class for courseval block.
  *
- * @package    mod_certificate
- * @copyright  2018 Juan Leyva
+ * @package    block_course_evals
+ * @copyright  2015 Appalachian State University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class mobile {
- 
     /**
-     * Returns the certificate course view for the mobile app.
+     * Returns the CoursEval block view for the mobile app.
      * @param  array $args Arguments from tool_mobile_get_content WS
      *
      * @return array       HTML, javascript and otherdata
      */
     public static function mobile_block_view($args) {
         global $OUTPUT, $USER, $CFG;
- 
-        $args = (object) $args;
- 
+
         // Capabilities check.
         require_login();
-        
+
         $urlstart = '';
         if (!empty($CFG->block_course_evals_url)) {
             $urlstart = $CFG->block_course_evals_url;
         }
-        
+
         $url = $urlstart . '&lang=h&uid=' . $USER->username;
-        
+
+        // Get HTML content and replace TM symbol for proper display.
         $content = file_get_contents($url);
         $content = str_replace('&#153;', '&trade;', $content);
- 
+
         $data = array(
             'content' => $content
         );
-        
+
         return [
             'templates' => [
                 [
