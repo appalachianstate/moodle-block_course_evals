@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * CourseEval Online Course Evaluation plugin
+ * CoursEval Online Course Evaluation plugin
  *
  * @package    block_course_evals
  * @author     Michelle Melton (modified code from Scott Krajewski, Augsburg College)
@@ -23,11 +23,11 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Course Evaluations';
+$string['pluginname'] = 'Course evaluations';
 
-$string['course_evals'] = 'Course Evaluations';
+$string['course_evals'] = 'Course evaluations';
 $string['course_evals:addinstance'] = 'Add a new CoursEval block';
 $string['course_evals:myaddinstance'] = 'Add a new CoursEval block to the My Moodle page';
 $string['course_evals_settings'] = 'CoursEval settings';
 $string['course_evals_url'] = 'URL';
-$string['course_evals_url_desc'] = 'Enter the URL to your rpi.asp page; this is found on your Remote Portal Interface Setup page in CourseEval3. Do not include uid in the path.';
+$string['course_evals_url_desc'] = 'Enter the URL to your rpi.asp page; this is found on your Remote Portal Interface Setup page in CoursEval. Do not include uid in the path.';

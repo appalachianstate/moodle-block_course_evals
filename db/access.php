@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * CourseEval Online Course Evaluation plugin
+ * CoursEval Online Course Evaluation plugin
  *
  * @package    block_course_evals
  * @author     Michelle Melton (modified code from Scott Krajewski, Augsburg College)
