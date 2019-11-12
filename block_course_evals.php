@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * CoursEval Online Course Evaluation plugin
+ * CoursEval Online Course Evaluation plugin.
  *
  * @package    block_course_evals
  * @author     Michelle Melton (modified code from Scott Krajewski, Augsburg College)
@@ -43,6 +43,8 @@ class block_course_evals extends block_base {
 
     /**
      * Return the block content.
+     * 
+     * @return string $content Block content.
      */
     public function get_content() {
         global $CFG, $USER;
@@ -63,7 +65,10 @@ class block_course_evals extends block_base {
     }
 
     /**
+     * Return that the block does have configuration settings.
+     * 
      * @see block_base::has_config()
+     * @return bool true
      */
     public function has_config() {
         return true;

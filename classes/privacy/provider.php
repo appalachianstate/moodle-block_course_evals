@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * CoursEval Online Course Evaluation plugin.
+ * Implement Privacy API.
  *
  * @package    block_course_evals
  * @author     Michelle Melton (modified code from Scott Krajewski, Augsburg College)
@@ -23,30 +23,26 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+namespace block_course_evals\privacy;
+
 defined('MOODLE_INTERNAL') || die();
 
-$capabilities = array(
+/**
+ * CoursEval block privacy provider.
+ *
+ * @package    block_course_evals
+ * @copyright  2015 Appalachian State University
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
 
-  'block/course_evals:myaddinstance' => array(
-      'captype' => 'write',
-      'contextlevel' => CONTEXT_SYSTEM,
-      'archetypes' => array(
-          'user' => CAP_ALLOW
-      ),
-
-      'clonepermissionsfrom' => 'moodle/my:manageblocks'
-  ),
-
-  'block/course_evals:addinstance' => array(
-      'riskbitmask' => RISK_SPAM | RISK_XSS,
-
-      'captype' => 'write',
-      'contextlevel' => CONTEXT_BLOCK,
-      'archetypes' => array(
-          'editingteacher' => CAP_ALLOW,
-          'manager' => CAP_ALLOW
-      ),
-
-      'clonepermissionsfrom' => 'moodle/site:manageblocks'
-  ),
-);
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
